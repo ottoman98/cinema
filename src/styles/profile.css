@@ -1,0 +1,21 @@
+.profile {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: black;
+  border-radius: 1rem;
+  padding: 10px;
+}
+.profile-header-img img {
+  width: 20vh;
+  border-radius: 1rem;
+}
+.user {
+  color: black !important;
+}
+.btn {
+  margin: 5px;
+}
+.list-image {
+  width: 20%;
+  margin: 10px;
+  border-radius: 0.5rem;
+}

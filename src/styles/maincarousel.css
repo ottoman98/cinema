@@ -1,0 +1,14 @@
+.carousel-container {
+  margin: 0 auto;
+  background-color: rebeccapurple;
+  margin-top: -17px;
+  width: 80vw;
+}
+
+.carousel-img {
+  aspect-ratio: 2/1;
+}
+
+.item-carousel-d {
+  font-size: 1vh;
+}
