@@ -16,7 +16,12 @@ router.get("/", async (req,res)=> {
 
 
 
+//crear usuario
+router.post("/Usuario/crear", async (req,res) =>{
+    const usuariosNew = usuario(req.body);
+    const usuarioSave= await usuariosNew.save(); 
 
+})
 
 //iniciar sesion con token
 
@@ -47,7 +52,7 @@ router.post("/login", async(req,res)=>{
 
 // Crear critica
 router.post("/Critica/add", async (req,res) =>{
-    const peliculas = Peliculas(req.body);
+    const Peliculas = peliculas(req.body);
 
     const authorization= request.get('authorization')
     let token= ''
@@ -59,10 +64,10 @@ router.post("/Critica/add", async (req,res) =>{
     if (!token || !decodedToken.id) {
         return res.status(401).json({error: 'token missing or invalid' })
     } 
-    const peliculasave= await peliculas.save(); 
+    const peliculaSave= await Peliculas.save(); 
     const {id : UserId}= decodedToken
     const user= usuario.findById(UserId); 
-    user.criticas= user.criticas.concat(peliculasave._id);
+    user.criticas= user.criticas.concat(peliculaSave._id);
 })
 
 
