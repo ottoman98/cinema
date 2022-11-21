@@ -13,7 +13,7 @@ const pelicula = new Schema({
   Starring: Array,
   Company: String,
   Duration: Number,
-  Usuario_id: String,
+  imagen : String
 });
 
 export default model("pelicula", pelicula);

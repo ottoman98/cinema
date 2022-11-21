@@ -1,9 +1,10 @@
 import express from "express";
 import IndexRoute from './routes/index_routes'
 import morgan from "morgan";
+const cors = require ('cors');
 
 const app = express();
-
+app.use(cors())
 
 export default app;
 
