@@ -3,28 +3,21 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import '../styles/card.css';
 import { Link } from 'react-router-dom';
 
-function KitchenSinkExample() {
+function KitchenSinkExample(props) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img
-        variant="top"
-        src="https://images8.alphacoders.com/695/695217.jpg"
-      />
+      <Card.Img variant="top" src={props.img} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        <Card.Title>{props.titulo}</Card.Title>
+        <Card.Text>{props.review}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        <ListGroup.Item>Fecha {props.fecha}</ListGroup.Item>
+        <ListGroup.Item>Calificacion {props.calificacion}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#">{props.director}</Card.Link>
+        <Card.Link href="#">{props.genero}</Card.Link>
       </Card.Body>
     </Card>
   );
